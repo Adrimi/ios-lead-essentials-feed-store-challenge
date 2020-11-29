@@ -10,9 +10,21 @@ import Foundation
 import RealmSwift
 
 public class RealmFeedStore: FeedStore {
+    
+    // MARK: - Parameters
+    
+    private let realm: Realm
+    
+    // MARK: - Lifecycle
+    
+    public init(configuration: Realm.Configuration) throws {
+        realm = try Realm(configuration: configuration)
+    }
+    
+    // MARK: - FeedStore
+    
     public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         do {
-            let realm = try Realm()
             try realm.write {
                 realm.deleteAll()
                 completion(.none)
@@ -24,7 +36,6 @@ public class RealmFeedStore: FeedStore {
     
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         do {
-            let realm = try Realm()
             try realm.write {
                 realm.deleteAll()
                 realm.add(
@@ -40,7 +51,6 @@ public class RealmFeedStore: FeedStore {
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
         do {
-            let realm = try Realm()
             if let localFeedObject = realm
                 .objects(RealmFeedObject.self)
                 .first {
@@ -52,6 +62,4 @@ public class RealmFeedStore: FeedStore {
             completion(.failure(error))
         }
     }
-    
-    public init() {}
 }
