@@ -11,33 +11,45 @@ import RealmSwift
 
 public class RealmFeedStore: FeedStore {
     public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-            completion(.none)
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.deleteAll()
+                completion(.none)
+            }
+        } catch {
+            completion(error)
         }
     }
     
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-            realm.add(
-                RealmFeedStoreMapper.createRealmFeedObject(
-                    feed: feed,
-                    timestamp: timestamp))
-            completion(.none)
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.deleteAll()
+                realm.add(
+                    RealmFeedStoreMapper.createRealmFeedObject(
+                        feed: feed,
+                        timestamp: timestamp))
+                completion(.none)
+            }
+        } catch {
+            completion(error)
         }
     }
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
-        let realm = try! Realm()
-        if let localFeedObject = realm
-            .objects(RealmFeedObject.self)
-            .first {
-            completion(.found(feed: localFeedObject.localFeed, timestamp: localFeedObject.timestamp))
-        } else {
-            completion(.empty)
+        do {
+            let realm = try Realm()
+            if let localFeedObject = realm
+                .objects(RealmFeedObject.self)
+                .first {
+                completion(.found(feed: localFeedObject.localFeed, timestamp: localFeedObject.timestamp))
+            } else {
+                completion(.empty)
+            }
+        } catch {
+            completion(.failure(error))
         }
     }
     
