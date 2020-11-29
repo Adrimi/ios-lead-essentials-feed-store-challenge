@@ -50,16 +50,12 @@ public class RealmFeedStore: FeedStore {
     }
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
-        do {
-            if let localFeedObject = realm
-                .objects(RealmFeedObject.self)
-                .first {
-                completion(.found(feed: localFeedObject.localFeed, timestamp: localFeedObject.timestamp))
-            } else {
-                completion(.empty)
-            }
-        } catch {
-            completion(.failure(error))
+        if let localFeedObject = realm
+            .objects(RealmFeedObject.self)
+            .first {
+            completion(.found(feed: localFeedObject.localFeed, timestamp: localFeedObject.timestamp))
+        } else {
+            completion(.empty)
         }
     }
 }
