@@ -17,6 +17,7 @@ public class RealmFeedStore: FeedStore {
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         let realm = try! Realm()
         try! realm.write {
+            realm.deleteAll()
             realm.add(
                 RealmFeedStoreMapper.createRealmFeedObject(
                     feed: feed,
