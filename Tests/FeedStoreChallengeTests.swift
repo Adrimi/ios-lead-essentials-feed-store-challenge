@@ -104,7 +104,9 @@ class FeedStoreChallengeTests: XCTestCase, FeedStoreSpecs {
 	// - MARK: Helpers
 	
 	private func makeSUT() -> FeedStore {
-		RealmFeedStore()
+        let configuration = Realm.Configuration.defaultConfiguration
+        let realm = try! RealmFeedStore(configuration: configuration)
+        return realm
 	}
 	
 }
