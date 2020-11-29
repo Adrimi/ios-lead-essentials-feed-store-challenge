@@ -11,7 +11,11 @@ import RealmSwift
 
 public class RealmFeedStore: FeedStore {
     public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
-        completion(.none)
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+            completion(.none)
+        }
     }
     
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
