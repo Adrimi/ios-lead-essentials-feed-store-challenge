@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,12 +18,11 @@
 		08CE2BB22285BCE700183A1B /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE2BAD2285BCE700183A1B /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
 		08CE2BB32285BCE700183A1B /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE2BAE2285BCE700183A1B /* XCTestCase+FailableInsertFeedStoreSpecs.swift */; };
 		08CE2BB52285BEF100183A1B /* FeedStoreChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE2BB42285BEF100183A1B /* FeedStoreChallengeTests.swift */; };
+		7A29029CE9370C0CB8100781 /* Pods_FeedStoreChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E4AEE9C8F8552FFC9D6F08 /* Pods_FeedStoreChallenge.framework */; };
 		952163D7256EF7ED001C47C0 /* RealmFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952163D6256EF7ED001C47C0 /* RealmFeedStore.swift */; };
 		952C769B2573BCD9006CF6B4 /* RealmFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C769A2573BCD9006CF6B4 /* RealmFeedImage.swift */; };
 		952C769F2573BD10006CF6B4 /* RealmFeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C769E2573BD10006CF6B4 /* RealmFeedObject.swift */; };
 		952C76A32573BD2B006CF6B4 /* RealmFeedStoreMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C76A22573BD2B006CF6B4 /* RealmFeedStoreMapper.swift */; };
-		95FBC4AF256C3E0200C3A549 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 95FBC4AE256C3E0200C3A549 /* Realm */; };
-		95FBC4B1256C3E0200C3A549 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95FBC4B0256C3E0200C3A549 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +50,13 @@
 		08CE2BAD2285BCE700183A1B /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		08CE2BAE2285BCE700183A1B /* XCTestCase+FailableInsertFeedStoreSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableInsertFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		08CE2BB42285BEF100183A1B /* FeedStoreChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreChallengeTests.swift; sourceTree = "<group>"; };
+		68E4AEE9C8F8552FFC9D6F08 /* Pods_FeedStoreChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedStoreChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		952163D6256EF7ED001C47C0 /* RealmFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFeedStore.swift; sourceTree = "<group>"; };
 		952C769A2573BCD9006CF6B4 /* RealmFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFeedImage.swift; sourceTree = "<group>"; };
 		952C769E2573BD10006CF6B4 /* RealmFeedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFeedObject.swift; sourceTree = "<group>"; };
 		952C76A22573BD2B006CF6B4 /* RealmFeedStoreMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFeedStoreMapper.swift; sourceTree = "<group>"; };
+		AC107C685204C297319F5A15 /* Pods-FeedStoreChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedStoreChallenge.debug.xcconfig"; path = "Target Support Files/Pods-FeedStoreChallenge/Pods-FeedStoreChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		D1D51B5CF31E57539F47C538 /* Pods-FeedStoreChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedStoreChallenge.release.xcconfig"; path = "Target Support Files/Pods-FeedStoreChallenge/Pods-FeedStoreChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95FBC4B1256C3E0200C3A549 /* RealmSwift in Frameworks */,
-				95FBC4AF256C3E0200C3A549 /* Realm in Frameworks */,
+				7A29029CE9370C0CB8100781 /* Pods_FeedStoreChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +85,8 @@
 				08CE2B8D2285BBD100183A1B /* FeedStoreChallenge */,
 				08CE2B982285BBD100183A1B /* Tests */,
 				08CE2B8C2285BBD100183A1B /* Products */,
+				385A3DE756BF46796C0C70D9 /* Pods */,
+				C2300981E7E470E9709F3384 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +137,23 @@
 			path = FeedStoreSpecs;
 			sourceTree = "<group>";
 		};
+		385A3DE756BF46796C0C70D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC107C685204C297319F5A15 /* Pods-FeedStoreChallenge.debug.xcconfig */,
+				D1D51B5CF31E57539F47C538 /* Pods-FeedStoreChallenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C2300981E7E470E9709F3384 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68E4AEE9C8F8552FFC9D6F08 /* Pods_FeedStoreChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -151,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08CE2B9F2285BBD100183A1B /* Build configuration list for PBXNativeTarget "FeedStoreChallenge" */;
 			buildPhases = (
+				92E6F7A3247B09B5A28B9CB8 /* [CP] Check Pods Manifest.lock */,
 				08CE2B862285BBD100183A1B /* Headers */,
 				08CE2B872285BBD100183A1B /* Sources */,
 				08CE2B882285BBD100183A1B /* Frameworks */,
@@ -161,10 +182,6 @@
 			dependencies = (
 			);
 			name = FeedStoreChallenge;
-			packageProductDependencies = (
-				95FBC4AE256C3E0200C3A549 /* Realm */,
-				95FBC4B0256C3E0200C3A549 /* RealmSwift */,
-			);
 			productName = FeedStoreChallenge;
 			productReference = 08CE2B8B2285BBD100183A1B /* FeedStoreChallenge.framework */;
 			productType = "com.apple.product-type.framework";
@@ -216,9 +233,6 @@
 				Base,
 			);
 			mainGroup = 08CE2B812285BBD100183A1B;
-			packageReferences = (
-				95FBC4AD256C3E0200C3A549 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-			);
 			productRefGroup = 08CE2B8C2285BBD100183A1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -245,6 +259,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92E6F7A3247B09B5A28B9CB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FeedStoreChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08CE2B872285BBD100183A1B /* Sources */ = {
@@ -339,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -398,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -411,6 +450,7 @@
 		};
 		08CE2BA02285BBD100183A1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC107C685204C297319F5A15 /* Pods-FeedStoreChallenge.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -429,6 +469,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.essentialdeveloper.FeedStoreChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -439,6 +480,7 @@
 		};
 		08CE2BA12285BBD100183A1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1D51B5CF31E57539F47C538 /* Pods-FeedStoreChallenge.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -457,6 +499,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.essentialdeveloper.FeedStoreChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -537,30 +580,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		95FBC4AD256C3E0200C3A549 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.1.4;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		95FBC4AE256C3E0200C3A549 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95FBC4AD256C3E0200C3A549 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		95FBC4B0256C3E0200C3A549 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95FBC4AD256C3E0200C3A549 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08CE2B822285BBD100183A1B /* Project object */;
 }
