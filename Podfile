@@ -8,3 +8,4 @@ target 'FeedStoreChallenge' do
     inherit! :complete
   end
 end
+end
