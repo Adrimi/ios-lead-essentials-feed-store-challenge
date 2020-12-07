@@ -22,10 +22,12 @@
 		952C769B2573BCD9006CF6B4 /* RealmFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C769A2573BCD9006CF6B4 /* RealmFeedImage.swift */; };
 		952C769F2573BD10006CF6B4 /* RealmFeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C769E2573BD10006CF6B4 /* RealmFeedObject.swift */; };
 		952C76A32573BD2B006CF6B4 /* RealmFeedStoreMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C76A22573BD2B006CF6B4 /* RealmFeedStoreMapper.swift */; };
-		953C5A7D257E3C6A00D5C8B7 /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953C5A7B257E3C6900D5C8B7 /* Realm.xcframework */; };
 		953C5A7E257E3C6A00D5C8B7 /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953C5A7B257E3C6900D5C8B7 /* Realm.xcframework */; };
-		953C5A7F257E3C6A00D5C8B7 /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953C5A7C257E3C6900D5C8B7 /* RealmSwift.xcframework */; };
 		953C5A80257E3C6A00D5C8B7 /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953C5A7C257E3C6900D5C8B7 /* RealmSwift.xcframework */; };
+		958165BF257E3EC300F354C4 /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953C5A7C257E3C6900D5C8B7 /* RealmSwift.xcframework */; };
+		958165C0257E3EC300F354C4 /* RealmSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 953C5A7C257E3C6900D5C8B7 /* RealmSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		958165C2257E3EC400F354C4 /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953C5A7B257E3C6900D5C8B7 /* Realm.xcframework */; };
+		958165C3257E3EC400F354C4 /* Realm.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 953C5A7B257E3C6900D5C8B7 /* Realm.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				958165C0257E3EC300F354C4 /* RealmSwift.xcframework in Embed Frameworks */,
+				958165C3257E3EC400F354C4 /* Realm.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,8 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953C5A7D257E3C6A00D5C8B7 /* Realm.xcframework in Frameworks */,
-				953C5A7F257E3C6A00D5C8B7 /* RealmSwift.xcframework in Frameworks */,
+				958165BF257E3EC300F354C4 /* RealmSwift.xcframework in Frameworks */,
+				958165C2257E3EC400F354C4 /* Realm.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +456,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.essentialdeveloper.FeedStoreChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -481,6 +486,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.essentialdeveloper.FeedStoreChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -504,6 +510,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.essentialdeveloper.FeedStoreChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -526,6 +533,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.essentialdeveloper.FeedStoreChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
