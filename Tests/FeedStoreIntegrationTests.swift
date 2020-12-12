@@ -79,6 +79,17 @@ class FeedStoreIntegrationTests: XCTestCase {
     }
     
 	private func clearCache() {
-		makeSUT().deleteCachedFeed(completion: {_ in})
+		deleteCachedData(from: makeSUT())
+	}
+	
+	private func deleteCachedData(from sut: FeedStore) {
+		let exp = expectation(description: "Wait for cache deletion")
+		
+		sut.deleteCachedFeed { error in
+			XCTAssertNil(error, "Cached Feed should be removed successfully, but got \(error!) instead")
+			exp.fulfill()
+		}
+		
+		wait(for: [exp], timeout: 5.0)
 	}
 }
