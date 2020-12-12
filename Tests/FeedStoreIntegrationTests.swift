@@ -15,18 +15,6 @@ class FeedStoreIntegrationTests: XCTestCase {
     //
     //  ***********************
     
-    override func setUp() {
-        super.setUp()
-     
-        setupEmptyStoreState()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-        
-        undoStoreSideEffects()
-    }
-    
     func test_retrieve_deliversEmptyOnEmptyCache() {
         let sut = makeSUT()
 
@@ -73,16 +61,10 @@ class FeedStoreIntegrationTests: XCTestCase {
     // - MARK: Helpers
     
     private func makeSUT() -> FeedStore {
-        let configuration = Realm.Configuration.defaultConfiguration
+		var configuration = Realm.Configuration.defaultConfiguration
+		configuration.deleteRealmIfMigrationNeeded = true
         let realm = try! RealmFeedStore(configuration: configuration)
         return realm
     }
     
-    private func setupEmptyStoreState() {
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
-    }
-
-    private func undoStoreSideEffects() {
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
-    }
 }
