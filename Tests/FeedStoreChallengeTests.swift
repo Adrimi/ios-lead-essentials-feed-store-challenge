@@ -20,15 +20,6 @@ class FeedStoreChallengeTests: XCTestCase, FeedStoreSpecs {
     //
     //  ***********************
     
-    override func setUp() {
-        super.setUp()
-        // Use an in-memory Realm identified by the name of the current test.
-        // This ensures that each test can't accidentally access or modify the data
-        // from other tests or the application itself, and because they're in-memory,
-        // there's nothing that needs to be cleaned up.
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
-    }
-
 	func test_retrieve_deliversEmptyOnEmptyCache() {
 		let sut = makeSUT()
 
@@ -104,7 +95,8 @@ class FeedStoreChallengeTests: XCTestCase, FeedStoreSpecs {
 	// - MARK: Helpers
 	
 	private func makeSUT() -> FeedStore {
-        let configuration = Realm.Configuration.defaultConfiguration
+        var configuration = Realm.Configuration.defaultConfiguration
+		configuration.inMemoryIdentifier = self.name
         let realm = try! RealmFeedStore(configuration: configuration)
         return realm
 	}
