@@ -20,9 +20,9 @@ class RealmFeedStoreMapper {
     
     private static func mapToLocal(_ localFeedImage: LocalFeedImage) -> RealmFeedImage {
         RealmFeedImage(
-            id: localFeedImage.id.uuidString,
+            id: localFeedImage.id,
             imageDescription: localFeedImage.description,
             location: localFeedImage.location,
-            urlString: localFeedImage.url.absoluteString)
+            urlString: localFeedImage.url)
     }
 }

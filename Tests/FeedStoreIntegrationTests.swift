@@ -15,6 +15,18 @@ class FeedStoreIntegrationTests: XCTestCase {
     //
     //  ***********************
     
+	override func setUp() {
+		super.setUp()
+		
+		clearCache()
+	}
+	
+	override func tearDown() {
+		super.tearDown()
+		
+		clearCache()
+	}
+	
     func test_retrieve_deliversEmptyOnEmptyCache() {
         let sut = makeSUT()
 
@@ -61,10 +73,12 @@ class FeedStoreIntegrationTests: XCTestCase {
     // - MARK: Helpers
     
     private func makeSUT() -> FeedStore {
-		var configuration = Realm.Configuration.defaultConfiguration
-		configuration.deleteRealmIfMigrationNeeded = true
+		let configuration = Realm.Configuration.defaultConfiguration
         let realm = try! RealmFeedStore(configuration: configuration)
         return realm
     }
     
+	private func clearCache() {
+		makeSUT().deleteCachedFeed(completion: {_ in})
+	}
 }

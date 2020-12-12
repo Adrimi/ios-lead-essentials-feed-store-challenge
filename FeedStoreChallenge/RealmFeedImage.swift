@@ -17,11 +17,11 @@ class RealmFeedImage: Object {
     
     override init() {}
     
-    init(id: String, imageDescription: String?, location: String?, urlString: String) {
-        self.id = id
+    init(id: UUID, imageDescription: String?, location: String?, urlString: URL) {
+		self.id = id.uuidString
         self.imageDescription = imageDescription
         self.location = location
-        self.urlString = urlString
+		self.urlString = urlString.absoluteString
     }
 }
 
